@@ -1,6 +1,14 @@
 import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Orders, Products, Protect, SharedLayout, Stats, Users } from "./pages";
+import {
+  Login,
+  Orders,
+  Products,
+  Protect,
+  SharedLayout,
+  Stats,
+  Users,
+} from "./pages";
 
 function App() {
   const isDarkMode = useSelector((state) => state.utils.isDarkMode);
@@ -25,6 +33,9 @@ function App() {
               <Route path="orders" element={<Orders />} />
             </Route>
             {/* Wrapper for protected Routes ends */}
+
+            {/* Public routes */}
+            <Route path="/login" element={<Login />} />
 
             <Route path="*" element={<h1>error</h1>} />
           </Routes>

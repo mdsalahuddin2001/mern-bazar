@@ -5,4 +5,7 @@ import Products from "./dashboard/Products";
 import Orders from "./dashboard/Orders";
 import Stats from "./dashboard/Stats";
 
-export { Protect, SharedLayout, Users, Products, Orders, Stats };
+// public
+import Login from "./Login";
+
+export { Protect, SharedLayout, Users, Products, Orders, Stats, Login };
